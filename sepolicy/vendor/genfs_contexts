@@ -51,3 +51,8 @@ genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.q
 
 # /proc/last_kmsg
 genfscon proc /last_kmsg                                                 u:object_r:proc_last_kmsg:s0
+
+# FPS info
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps       u:object_r:sysfs_graphics:s0
+
+
