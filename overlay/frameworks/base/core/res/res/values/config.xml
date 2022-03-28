@@ -841,4 +841,8 @@
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>me.waveproject.keyhandler.KeyHandler</item>
     </string-array>
+
+   <!-- List of comma separated package names for which we the system will not show crash like
+         tts, etc. dialogs. -->
+    <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
 </resources>
