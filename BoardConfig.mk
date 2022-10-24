@@ -123,6 +123,9 @@ TARGET_KERNEL_CLANG_VERSION := proton
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton
 TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
 TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+ifneq ($(RICE_OFFICIAL),)
+TARGET_KERNEL_OPTIONAL_LD := true
+endif
 
 # NFC
 TARGET_USES_NQ_NFC := true
