@@ -26,15 +26,34 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
 # Inherit some common PixelOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_QUICK_TAP := true
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier
-PRODUCT_NAME := aosp_ginkgo
+PRODUCT_NAME := lineage_ginkgo
 PRODUCT_DEVICE := ginkgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Rom flags
+RICE_OFFICIAL := true
+TARGET_ENABLE_BLUR := true
+
+WITH_GMS := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_OPTOUT_GOOGLE_TELEPHONY := true
+
+# Aperture Camera
+TARGET_BUILD_APERTURE_CAMERA := true
+
+# Graphene Camera
+TARGET_BUILD_GRAPHENEOS_CAMERA := false
+
+# AudioFx
+TARGET_EXCLUDES_AUDIOFX := true
+
+# Spoof build description/fingerprint as pixel device
+TARGET_USE_PIXEL_FINGERPRINT := true
