@@ -33,3 +33,24 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8/8T
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Rom flags
+ RICE_OFFICIAL := true
+ TARGET_ENABLE_BLUR := true
+ USE_LEGACY_BOOTANIMATION:=true
+
+WITH_GMS := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_OPTOUT_GOOGLE_TELEPHONY := true
+
+# Aperture Camera
+TARGET_BUILD_APERTURE_CAMERA := true
+
+# Graphene Camera
+TARGET_BUILD_GRAPHENEOS_CAMERA := false
+
+# AudioFx
+TARGET_EXCLUDES_AUDIOFX := true
+
+# Spoof build description/fingerprint as pixel device
+TARGET_USE_PIXEL_FINGERPRINT := true
